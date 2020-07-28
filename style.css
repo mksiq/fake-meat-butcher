@@ -1,0 +1,317 @@
+/* Add any CSS you need to this file. */
+
+/* https://colorhunt.co/palette/172691 */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #596157;
+  font-family: "Open sans", sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+header {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: #5b8c5a;
+}
+
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+nav {
+  padding: 0;
+  background-color: #552244;
+  align-content: center;
+  margin: 0 0 1% 0;
+}
+
+nav li {
+  color: white;
+  padding: 0 1%;
+  float: left;
+  min-height: 35px;
+  max-height: 35px;
+  justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li:hover {
+  opacity: 0.7;
+  background-color: #596157;
+  max-height: 35px;
+}
+
+nav ul {
+  min-height: 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+}
+
+#searchLi {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex: 0.5;
+  min-height: 100%;
+}
+
+#searchLi:hover {
+  background-color: #552244;
+}
+
+#searchLi input {
+  flex: 1;
+  max-width: 100%;
+  border-style: hidden;
+  padding-left: 5px;
+}
+
+#searchLi i {
+  margin-left: 5px;
+}
+
+li {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+  min-height: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#changePage {
+  margin-top: 0.5%;
+  color: #596157;
+}
+
+.changeIcon:hover {
+  color: #5b8c5a;
+}
+
+@media only screen and (max-width: 540px) {
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0.5%;
+    text-align: center;
+    width: 25%;
+    height: max-content;
+  }
+  .info {
+    display: none;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 601px) {
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0.5%;
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    height: max-content;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+.info {
+  color: grey;
+  font-size: 1em;
+  margin: 10px;
+  margin-bottom: 0px;
+  /* display: none; for cellphone */
+}
+
+.card img {
+  width: 100%;
+  max-height: 180px;
+}
+
+.card button {
+  background-color: #5b8c5a;
+}
+
+.card p {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2%;
+}
+
+.card h2 {
+  color: green;
+  display: block;
+  margin: 0;
+}
+
+#cardInfo {
+  margin: 0;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+#price {
+  margin: 2%;
+  color: darkred;
+  font-size: 1.4em;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+footer {
+  padding: 0;
+  background-color: #552244;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+footer li {
+  padding: 1% 2%;
+  color: white;
+  display: flex;
+  float: left;
+  min-height: 5%;
+  max-height: 30px;
+  justify-content: space-evenly;
+}
+
+#space {
+  padding: 1.5%;
+}
+
+/* 
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li, footer {
+    float: left;
+}
+
+nav a:link, nav a:visited {
+    display: block;
+    color: #ffffff;
+    background-color: navy;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-left: 1px inset #ecefec;
+    border-right: 1px inset #ecefec;
+}
+
+nav ul li ul {
+    padding: 8px 12px;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+nav ul li:hover ul {
+    display: block;
+    padding: 0;
+    width: 150px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li ul li {
+    display: block;
+    text-align: left;
+    width: 150px;
+}
+
+nav a:hover {
+    background-color: indigo;
+    color: #ffffff;
+}
+.clear {
+    clear:both;
+}
+
+.center {
+    text-align:center;
+    padding-top:0.6em;
+}
+
+footer {
+    background-color: navy;
+    color: #ffffff;
+    height:2.5em;
+} */
