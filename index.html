@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
   <script src="products.js"></script>
   <script src="script.js"></script>
 </head>
@@ -31,13 +33,14 @@
       <li class="desktop" id="vegan">Vegan</li>
       <li id="searchLi"><input type="text" id="searchField" placeholder="Search"><i class="material-icons">search</i>
       </li>
-      <li><a href="./cart.html" id="cart"><i class="material-icons">shopping_cart</i></a></li>
+      <a href="./cart.html" id="cart"></a>
+      <li><i class="material-icons">shopping_cart</i></a></li>
     </ul>
   </nav>
 
   <main>
-    <div class="products">
-      <div class="card">
+    <div id="products">
+      <!-- <div class="card">
         <img src="images/1.png" alt="Beyond Burger" style="width:100%">
         <h2>Beyond Burger</h2>
         <div id="cardInfo">
@@ -47,91 +50,8 @@
         <p>CAD$<spam id="price">10.90</spam>
         </p>
         <p><button>Add to cart</button></p>
-      </div>
+      </div> -->
 
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
-
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
-
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
-
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
-
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
-
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
-
-      <div class="card">
-        <img src="images/1.png" alt="Beyond Burger" style="width:100%">
-        <h2>Beyond Burger</h2>
-        <div id="cardInfo">
-          <p class="info">Plant-based Patties.</p>
-          <p class="info">Weight 226 g</p>
-        </div>
-        <p>CAD$<spam id="price">10.90</spam>
-        </p>
-        <p><button>Add to cart</button></p>
-      </div>
 
 
 
@@ -147,11 +67,16 @@
 
   <footer>
     <ul>
-      <li>Contact</li>
-      <li>About</li>
-      <li>Twitter</li>
-      <li>IG</li>
-      <li>Facebook</li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
+      </li>
+      <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon"
+            aria-hidden="true"></i></a>
+      </li>
+      <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon"
+            aria-hidden="true"></i></a>
+      </li>
     </ul>
   </footer>
 

@@ -111,7 +111,7 @@ main {
   justify-content: center;
 }
 
-.products {
+#products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -271,6 +271,18 @@ footer li {
   min-height: 5%;
   max-height: 30px;
   justify-content: space-evenly;
+  font-size: small;
+  margin: 0px 5px 0 5px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .icon {
+  margin: 3px 5px 0 5px;
+  color: white;
 }
 
 #cart, #home {
@@ -279,4 +291,8 @@ footer li {
 
 #userCart {
   background-color: black;
+}
+
+#about {
+  text-align: justify;
 }
