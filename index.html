@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="icon" href="images/ico.svg">
   <meta charset="utf-8" />
   <title>Fake Meat Butcher Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +16,6 @@
   <script src="script.js"></script>
 </head>
 <!-- Make cards inline and collapse -->
-
 <body>
   <header>
     <img src="images/logo.svg" alt="My store logo">
@@ -26,7 +26,7 @@
     <ul>
       <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
       <li class="mobile"><i class="material-icons">menu</i></li>
-      <li class="desktop">Burgers</li>
+      <li class="desktop" id="burgers">Burgers</li>
       <li class="desktop">Sausages</li>
       <li class="desktop">Beef</li>
       <li class="desktop">Other</li>
@@ -38,9 +38,9 @@
     </ul>
   </nav>
 
-  <main>
-    <div id="products">
-      <!-- <div class="card">
+  <main id="main">
+    <!-- <div id="products">
+      <div class="card">
         <img src="images/1.png" alt="Beyond Burger" style="width:100%">
         <h2>Beyond Burger</h2>
         <div id="cardInfo">
@@ -50,17 +50,12 @@
         <p>CAD$<spam id="price">10.90</spam>
         </p>
         <p><button>Add to cart</button></p>
-      </div> -->
-
-
-
-
-
-    </div>
+      </div> 
+    </div> -->
     <div id="changePage">
-      <i class="material-icons changeIcon">skip_previous</i>
+      <i class="material-icons changeIcon" id="menu_back">skip_previous</i>
       <i class="material-icons changeIcon">keyboard_arrow_up</i>
-      <i class="material-icons changeIcon">skip_next</i>
+      <i class="material-icons changeIcon" id="menu_next">skip_next</i>
     </div>
 
   </main>

@@ -1,20 +1,83 @@
 /* Add any JavaScript you need to this file. */
-var productsDiv;
+var productsDiv = document.createElement("div");
+var main;
+var next;
+var back;
+productsDiv.id = "products";
 window.addEventListener("load", loadJavaScript, false);
 
-function loadJavaScript() {
+var index = 0;
+var total = 0;
+var maxNumberOfProduts = 8;
+ var next
 
+function loadJavaScript() {
+  var burger = document.getElementById("burgers")
+  next = document.getElementById("menu_next");
+  back = document.getElementById("menu_back");
+  main = document.getElementById("main")
+  next.addEventListener("click", nextProducts);
+  back.addEventListener("click", backProducts);
+  index = 0;
+  resetProductsDiv();
+  createProductsDiv();
   loadProducts();
 }
 
+function nextProducts(){
+  if(index < products.length){  
+    resetProductsDiv();
+    createProductsDiv();
+    loadProducts();
+  }else {
+    next.style = "color: lightgrey";
+  }
+}
+
+function backProducts(){
+  if(index > maxNumberOfProduts){  
+    index -= (maxNumberOfProduts*2);
+    resetProductsDiv();
+    createProductsDiv();
+    loadProducts();
+    next.style = "color: #596157";
+  } else {
+    back.style = "color: lightgrey";
+  }
+}
+
+function createProductsDiv() {
+  main.insertBefore(productsDiv, main.firstChild);
+}
+
+function resetProductsDiv() {
+  total = 0;
+  var elem = document.querySelector("#products");
+  if (elem && document.getElementById("main")) {
+    document.getElementById("main").removeChild(document.querySelector("#products"));
+    productsDiv = document.createElement("products");
+    productsDiv.id = "products";
+    back.style = "color: #596157";
+  } 
+}
+
 var loadProducts = () => {
-  console.log(products[0])
   productsDiv = document.getElementById("products");
-  products.forEach((product) => createCards(product))
+  console.log("Index eh" + index)
+  for (; index < products.length && total < maxNumberOfProduts; index++) {
+    total++;
+    console.log("Index eh" + index)
+    createCards(products[index]);
+  }
+
+ // products.forEach((product) => createCards(product))
+}
+
+var loadBurger = () => {
+  productsDiv = document.getElementById("products")
 }
 
 var createCards = (product) => {
-  console.log(products[0])
   var card = document.createElement("div");
   card.className = "card";
 
@@ -37,7 +100,7 @@ var createCards = (product) => {
 
   var pInfo2 = document.createElement("p");
   pInfo1.className = "info";
-  var p2Node = document.createTextNode(`Weigth: ${product.weigth}lbs`);
+  var p2Node = document.createTextNode(`Weight: ${product.weigth}g`);
   pInfo2.appendChild(p2Node);
   pInfo2.className = "info";
   divInfo.appendChild(pInfo2);

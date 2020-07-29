@@ -128,7 +128,7 @@ main {
 
 /* Mobile */
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 540px), (max-height: 800px){
   header img {
     width: 80px;
     height: 70px;
@@ -161,9 +161,11 @@ main {
   }
 }
 
+
+
 /* Desktop */
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 601px) and (min-height: 800px) {
   header {
     min-height: 90px;
     max-height: 90px;
@@ -173,6 +175,7 @@ main {
     height: 70px;
   }
   .card {
+    max-width: 200px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 1% 2%;
