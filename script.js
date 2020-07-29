@@ -9,15 +9,26 @@ window.addEventListener("load", loadJavaScript, false);
 var index = 0;
 var total = 0;
 var maxNumberOfProduts = 8;
- var next
+var changePage;
 
 function loadJavaScript() {
-  var burger = document.getElementById("burgers")
+  var searchButton = document.getElementById("searchButton");
+  var burger = document.getElementById("menu_burgers");
+  var sausages = document.getElementById("menu_sausages");
+  var beef = document.getElementById("menu_beef");
+  var vegan = document.getElementById("menu_vegan");
   next = document.getElementById("menu_next");
   back = document.getElementById("menu_back");
   main = document.getElementById("main")
+  changePage = document.getElementById("changePage")
   next.addEventListener("click", nextProducts);
   back.addEventListener("click", backProducts);
+  back.addEventListener("click", backProducts);
+  burger.addEventListener("click", loadBurger);
+  sausages.addEventListener("click", loadSausage);
+  beef.addEventListener("click", loadBeef);
+  vegan.addEventListener("click", loadVegan);
+  searchButton.addEventListener("click", searchProducts);
   index = 0;
   resetProductsDiv();
   createProductsDiv();
@@ -63,18 +74,84 @@ function resetProductsDiv() {
 
 var loadProducts = () => {
   productsDiv = document.getElementById("products");
-  console.log("Index eh" + index)
   for (; index < products.length && total < maxNumberOfProduts; index++) {
     total++;
-    console.log("Index eh" + index)
     createCards(products[index]);
   }
 
  // products.forEach((product) => createCards(product))
 }
 
+var searchProducts = () => {
+  resetProductsDiv();
+  createProductsDiv();
+  var text = document.getElementById("searchField").value;
+  console.log(text)
+  changePage.style = "display: none";
+  productsDiv = document.getElementById("products");
+  index = 0;
+  for (; index < products.length && total < maxNumberOfProduts; index++) {
+    if(products[index].name.toLowerCase().includes(text.toLowerCase()) || 
+      products[index].description.toLowerCase().includes(text.toLowerCase())){
+      total++;
+      createCards(products[index]);
+    }
+  }
+
+ // products.forEach((product) => createCards(product))
+}
+
 var loadBurger = () => {
-  productsDiv = document.getElementById("products")
+  resetProductsDiv();
+  createProductsDiv();
+  changePage.style = "display: none";
+  productsDiv = document.getElementById("products");
+  index = 0;
+  for (; index < products.length && total < maxNumberOfProduts; index++) {
+    if(products[index].category.includes("hamburger")){
+      total++;
+      createCards(products[index]);
+    }
+  }
+}
+var loadSausage = () => {
+  resetProductsDiv();
+  createProductsDiv();
+  changePage.style = "display: none";
+  productsDiv = document.getElementById("products");
+  index = 0;
+  for (; index < products.length && total < maxNumberOfProduts; index++) {
+    if(products[index].category.includes("sausage")){
+      total++;
+      createCards(products[index]);
+    }
+  }
+}
+var loadVegan = () => {
+  resetProductsDiv();
+  createProductsDiv();
+  changePage.style = "display: none";
+  productsDiv = document.getElementById("products");
+  index = 0;
+  for (; index < products.length && total < maxNumberOfProduts; index++) {
+    if(products[index].category.includes("vegan")){
+      total++;
+      createCards(products[index]);
+    }
+  }
+}
+var loadBeef = () => {
+  resetProductsDiv();
+  createProductsDiv();
+  changePage.style = "display: none";
+  productsDiv = document.getElementById("products");
+  index = 0;
+  for (; index < products.length && total < maxNumberOfProduts; index++) {
+    if(products[index].category.includes("beef")){
+      total++;
+      createCards(products[index]);
+    }
+  }
 }
 
 var createCards = (product) => {
@@ -110,7 +187,7 @@ var createCards = (product) => {
   pPrice.appendChild(priceNode);
   var spamPrice = document.createElement("spam");
   spamPrice.id = "price";
-  var price2Node = document.createTextNode(`$${product.price}`);
+  var price2Node = document.createTextNode(`$${product.price.toFixed(2)}`);
   spamPrice.appendChild(price2Node);
   pPrice.appendChild(spamPrice);
 
