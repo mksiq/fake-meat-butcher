@@ -101,7 +101,7 @@ li {
   margin: 0;
 }
 
-main {
+#main {
   display: flex;
   flex-grow: 1;
   min-height: 2em;
@@ -361,3 +361,59 @@ footer .icon {
 #about {
   text-align: justify;
 }
+
+#inputDiv{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  width: 100%;
+}
+#mainSignup{
+  flex-grow: 1;
+  min-height: 2em;
+  margin-top: 0;
+  align-items: center;
+  background-color: #EEE;
+  justify-content: center;
+}
+#mainSignup h2{
+  margin-top: 5%;
+  text-align: center;
+}
+#rightForm{
+  margin-left: 5%;
+  width: 100%;
+}
+
+#leftForm{
+
+  width: 100%;
+}
+#leftForm p input {
+  width: 100%;
+  margin-bottom: 3%;
+}
+#rightForm p input {
+  width: 100%;
+  margin-bottom: 3%;
+}
+#terms{
+  text-decoration: underline;
+  color: #596157;
+  font-weight: bold;
+}
+#formId{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#leftForm p{
+  margin: 0;
+}
+#rightForm p{
+  margin: 0;
+}
+
+
+

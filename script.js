@@ -21,9 +21,11 @@ function loadJavaScript() {
   back = document.getElementById("menu_back");
   main = document.getElementById("main")
   changePage = document.getElementById("changePage")
-  next.addEventListener("click", nextProducts);
-  back.addEventListener("click", backProducts);
-  back.addEventListener("click", backProducts);
+  if(next){
+    next.addEventListener("click", nextProducts);
+    back.addEventListener("click", backProducts);
+  }
+  
   burger.addEventListener("click", loadBurger);
   sausages.addEventListener("click", loadSausage);
   beef.addEventListener("click", loadBeef);
@@ -58,7 +60,9 @@ function backProducts(){
 }
 
 function createProductsDiv() {
-  main.insertBefore(productsDiv, main.firstChild);
+  if(main && main.firstChild){
+    main.insertBefore(productsDiv, main.firstChild);
+  }
 }
 
 function resetProductsDiv() {
@@ -202,8 +206,7 @@ var createCards = (product) => {
   card.appendChild(divInfo);
   card.appendChild(pPrice);
   card.appendChild(pAdd);
-
-  productsDiv.appendChild(card)
+  if(productsDiv) productsDiv.appendChild(card)
 }
 
 {/* <div class="card"> XX
