@@ -14,6 +14,7 @@
 
     <script src="products.js"></script>
     <script src="script.js"></script>
+    <script src="signUp.js"></script>
 </head>
 <!-- Make cards inline and collapse -->
 
@@ -26,7 +27,7 @@
     <nav>
         <ul>
             <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
-            <li class="mobile"><i class="material-icons">menu</i></li>
+            <!-- <li class="mobile"><i class="material-icons">menu</i></li>
             <li class="desktop" id="menu_burgers">Burgers</li>
             <li class="desktop" id="menu_sausages">Sausages</li>
             <li class="desktop" id="menu_beef">Beef</li>
@@ -34,7 +35,7 @@
             <li class="desktop" id="menu_vegan">Vegan</li>
             <li id="searchLi"><input type="text" id="searchField" placeholder="Search"><i class="material-icons"
                     id="searchButton">search</i>
-            </li>
+            </li> -->
             <a href="./cart.html" id="cart">
                 <li> <a href="./cart.html" id="cart"><i class="material-icons">shopping_cart</i></a></li>
                 <li class="desktop" id="menu_signup">Signup</li>
@@ -44,7 +45,12 @@
 
     <main id="mainSignup">
         <h2>User Sign up</h2>
-        <form id="formId" method="GET" action="#">
+        <div id="popup">
+            <!-- <p id="outputMessageCheckbox">Please click the Checkbox</p> -->
+            <p id="outputMessageCheckbox">There is no cryptography in password, so please, don't use a real one.</p>
+            <button id=popupButton>Ok</button>
+        </div>
+        <form id="formId" method="POST" action="https://httpbin.org/post">
             <div id="inputDiv">
                 <!-- Flex box -->
                 <!-- Left column -->
@@ -54,7 +60,7 @@
                     <p>Password:</p>
                     <p><input type="password" name="password"></p>
                     <p>E-mail:</p>
-                    <p><input type="text" name="email" size="30"></p>                  
+                    <p><input type="text" name="email" size="30"></p>
                 </div>
                 <div id="rightForm">
                     <p>Last Name:</p>
@@ -62,12 +68,15 @@
                     <p>Phone number:</p>
                     <p><input type="text" name="first" size="30"></p>
                     <p>Confirm Password:</p>
-                    <p><input type="password2" name="password"></p>
-          
-                </div> 
+                    <p><input type="password" name="password2"></p>
+                </div>
             </div>
-            <p><input type="checkbox" name="like" value="56">I have read the <a id="terms">terms</a> and I accept it.</p>
-            <p><input type="reset" name="reset" value="Clear"><input type="submit" name="submit" value="Submit"></p>
+            <p><input  type="checkbox" name="like" value="agree" id="checkAgree">I have read the <a id="terms">terms</a> and
+                I accept it.</p>
+                <p id="signUpButtons">
+                    <input id="submitButtonForm" type="submit" name="submit" value="Submit">
+                    <input id="clearButtonForm" type="reset" name="reset" value="Clear">
+                </p>
         </form>
     </main>
     <footer>
