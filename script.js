@@ -2,7 +2,7 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 var myStorage = window.localStorage;
-
+console.log(productInCart)
 
 
 var productsDiv = document.createElement('div');
@@ -209,6 +209,7 @@ var createCards = (product) => {
   var addNode = document.createTextNode('Add to cart');
   button.appendChild(addNode);
   addItem = () =>{
+    productInCart = myStorage.getItem('Cart')
     productInCart+= `${product.id},`;
     myStorage.setItem("Cart", productInCart);
     console.log(productInCart);
