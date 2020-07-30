@@ -488,3 +488,35 @@ input:after{
 #popupButton{
   background-color: #5b8c5a;
 }
+.cart p{
+  text-align: center;
+}
+#cartTable{
+  margin-top: 10%;
+  width: 100%;
+}
+#cartTable, #cartTable th {
+  border:1px solid #552244;
+  border-collapse: collapse;
+}
+#cartTable th{
+  margin-right: 5px;
+  width:max-content;
+}
+#nameCart{
+  min-width: 300px;
+}
+#clearCart{
+  min-width:10%;
+  max-width:30%;
+  background-color: #552244;
+}
+#checkout{
+  min-width:10%;
+  max-width:30%;
+  background-color: #5b8c5a;
+}
+#cartButtons{
+  display: flex;
+  justify-content: space-between;
+}

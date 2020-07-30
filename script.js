@@ -3,7 +3,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 var myStorage = window.localStorage;
 
-var productInCart = "";
+
 
 var productsDiv = document.createElement('div');
 var main;
@@ -17,9 +17,6 @@ var total = 0;
 var maxNumberOfProducts = 8;
 var changePage;
 function loadJavaScript() {
-
-
-
   var searchButton = document.getElementById('searchButton');
   var burger = document.getElementById('menu_burgers');
   var sausages = document.getElementById('menu_sausages');
@@ -217,21 +214,12 @@ var createCards = (product) => {
     console.log(productInCart);
   }
   button.addEventListener("click", addItem);
-
-
-
-
   pAdd.appendChild(button);
-
-
   card.appendChild(img);
   card.appendChild(h2);
   card.appendChild(divInfo);
   card.appendChild(pPrice);
   card.appendChild(pAdd);
-
-
-
   if (productsDiv) productsDiv.appendChild(card);
 };
 

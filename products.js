@@ -1,3 +1,4 @@
+var productInCart = "";
 var products = [
   {
     id: 1,

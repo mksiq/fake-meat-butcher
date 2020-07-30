@@ -46,7 +46,7 @@
     <main id="mainSignup">
         <h2>User Sign up</h2>
         <div id="popup">
-            <!-- <p id="outputMessageCheckbox">Please click the Checkbox</p> -->
+          
             <p id="outputMessageCheckbox">There is no cryptography in password, so please, don't use a real one.</p>
             <button id=popupButton>Ok</button>
         </div>
@@ -56,22 +56,22 @@
                 <!-- Left column -->
                 <div id="leftForm">
                     <p>First Name:</p>
-                    <p><input type="text" name="first" size="30"></p>
+                    <p><input type="text" name="first" size="30" required></p>
                     <p>Password:</p>
-                    <p><input type="password" name="password"></p>
+                    <p><input type="password" name="password" min="6" required></p>
                     <p>E-mail:</p>
-                    <p><input type="text" name="email" size="30"></p>
+                    <p><input type="email" name="email" min="5" required ></p>
                 </div>
                 <div id="rightForm">
                     <p>Last Name:</p>
-                    <p><input type="text" name="last" maxlength="35"></p>
+                    <p><input type="text" name="last"  maxlength="35" required></p>
                     <p>Phone number:</p>
-                    <p><input type="text" name="first" size="30"></p>
+                    <p><input type="text" name="first" maxlength="35" required></p>
                     <p>Confirm Password:</p>
-                    <p><input type="password" name="password2"></p>
+                    <p><input type="password" name="password2" min="6" required></p>
                 </div>
             </div>
-            <p><input  type="checkbox" name="like" value="agree" id="checkAgree">I have read the <a id="terms">terms</a> and
+            <p><input  type="checkbox" name="like" value="agree" id="checkAgree" required>I have read the <a id="terms">terms</a> and
                 I accept it.</p>
                 <p id="signUpButtons">
                     <input id="submitButtonForm" type="submit" name="submit" value="Submit">

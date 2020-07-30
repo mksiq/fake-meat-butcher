@@ -43,9 +43,21 @@
 
   <main id="mainSignup">
 
+
     <div class="cart">
-      <p><button id="userCart">No items Yet</button></p>
-      <p><button id="clearCart">Clear Cart</button></p>
+      <h2>Shopping Cart</h2>
+      <p id="cartIsEmpty">No items yet :(</p>
+      <table id="cartTable">
+        <thead>
+          <tr><th>Code</th><th>Name</th><th>Qtd</th><th>Price</th><th>Total</th></tr>
+        </thead>
+        <tbody id="tBody">
+        </tbody>
+        <tfoot id="tFoot">
+          
+        </tfoot>
+      </table>
+      <p id="cartButtons"><button id="checkout">Checkout</button><button id="clearCart">Clear Cart</button></p>
     </div>
 
   </main>
