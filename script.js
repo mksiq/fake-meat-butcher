@@ -2,7 +2,7 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 var myStorage = window.localStorage;
-console.log(productInCart)
+var productInCart = "";
 
 
 var productsDiv = document.createElement('div');
@@ -97,14 +97,13 @@ var searchProducts = () => {
   resetProductsDiv();
   createProductsDiv();
   var text = document.getElementById('searchField').value;
-  console.log(text);
   changePage.style = 'display: none';
   productsDiv = document.getElementById('products');
   index = 0;
   for (; index < products.length && total < maxNumberOfProducts; index++) {
     if (
-      products[index].name.toLowerCase().includes(text.toLowerCase()) ||
-      products[index].description.toLowerCase().includes(text.toLowerCase())
+        products[index].name.toLowerCase().includes(text.toLowerCase()) ||
+        products[index].description.toLowerCase().includes(text.toLowerCase())
     ) {
       total++;
       createCards(products[index]);
@@ -172,7 +171,7 @@ var createCards = (product) => {
   card.className = 'card';
 
   var img = document.createElement('img');
-  img.src = `images/${product.id}.png`;
+  img.src = `images/${product.id}.jpg`;
   img.alt = product.description;
   img.style = 'width:100%';
 
@@ -208,11 +207,11 @@ var createCards = (product) => {
   var button = document.createElement('button');
   var addNode = document.createTextNode('Add to cart');
   button.appendChild(addNode);
-  addItem = () =>{
+  var addItem = () =>{
     productInCart = myStorage.getItem('Cart')
+    if(!productInCart) productInCart = "";
     productInCart+= `${product.id},`;
     myStorage.setItem("Cart", productInCart);
-    console.log(productInCart);
   }
   button.addEventListener("click", addItem);
   pAdd.appendChild(button);
@@ -223,6 +222,3 @@ var createCards = (product) => {
   card.appendChild(pAdd);
   if (productsDiv) productsDiv.appendChild(card);
 };
-
-
-

@@ -5,10 +5,10 @@ window.onload = () =>{
     var okButton  = document.getElementById("popupButton");
 
     terms.addEventListener("click", () =>{
-        popup.style = "display: block";
+        popup.style.display = "block";
     })
-    
+
     okButton.addEventListener("click", () =>{
-        popup.style = "display: none";
+        popup.style.display = "none";
     })
 }

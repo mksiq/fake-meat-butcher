@@ -302,7 +302,7 @@ footer .icon {
   color: white;
 }
 
-#cart, #home {
+.iconNav, #home {
   color: white;
 }
 
@@ -311,7 +311,10 @@ footer .icon {
 }
 
 #about {
-  text-align: justify;
+  margin-top: 10%;
+  text-align: center;
+
+
 }
 
 #inputDiv {
@@ -322,7 +325,7 @@ footer .icon {
   width: 100%;
 }
 
-#mainSignup {
+.mainOther {
   flex-grow: 1;
   min-height: 2em;
   margin-top: 0;
@@ -331,7 +334,7 @@ footer .icon {
   justify-content: center;
 }
 
-#mainSignup h2 {
+.mainOther h2 {
   margin-top: 5%;
   text-align: center;
 }
@@ -344,6 +347,7 @@ footer .icon {
 #leftForm {
   width: 100%;
 }
+
 
 #leftForm p input {
   width: 100%;
@@ -377,7 +381,7 @@ footer .icon {
 #signUpButtons{
   display: flex;
   justify-content: space-between;
-  
+
 }
 #clearButtonForm{
   min-width: 10%;
@@ -456,7 +460,7 @@ input:after{
   #formId{
     width: 80%;
   }
-  #mainSignup{
+  .mainOther{
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -478,7 +482,7 @@ input:after{
   max-height: 40%;
   background-color: #596157;
   padding: 0 1% 1%;
-  
+
 }
 #popup p{
   margin: 4% 10% 0;
@@ -519,4 +523,9 @@ input:after{
 #cartButtons{
   display: flex;
   justify-content: space-between;
+}
+
+.otherLink{
+  color: #5b8c5a;
+  text-decoration: underline;
 }

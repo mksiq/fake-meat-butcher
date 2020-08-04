@@ -20,7 +20,7 @@ window.onload = () => {
         cartButtons.style = "display: none";
         table.style = "display: none";
     } else {
-        cartIsEmpty.style = "display: none";
+        cartIsEmpty.style.display = "none"; // This is the correct way to apply css by DOM
     }
     
     var tBody = document.getElementById("tBody");
@@ -28,16 +28,21 @@ window.onload = () => {
     var cartItems = [];
     if(cartItems){
         cartItems = myStorage.getItem('Cart').split(',');
-    
+
+        // cartItems.forEach( (item) )
+
+
+
+
 
         for(let i = 0; i < cartItems.length - 1; i++){
             var tr = document.createElement("tr");
             var thId = document.createElement("th");
-            var idNode = document.createTextNode(cartItems[i]);
+            var idNode = document.createTextNode(cartItems[i] );
             thId.appendChild(idNode);
 
             var thName = document.createElement("th");
-            var nameNode = document.createTextNode(products[cartItems[i]].name);
+            var nameNode = document.createTextNode(products[cartItems[i]-1].name);
             thName.appendChild(nameNode);
 
             var thQty = document.createElement("th");
@@ -45,14 +50,13 @@ window.onload = () => {
             thQty.appendChild(qtyNode);
 
             var thPrice = document.createElement("th");
-            var priceNode = document.createTextNode((products[cartItems[i]].price).toFixed(2));
+            var priceNode = document.createTextNode((products[cartItems[i]-1].price).toFixed(2));
             thPrice.appendChild(priceNode);
 
             var thTotal = document.createElement("th");
         
-            var totalNode = document.createTextNode((products[cartItems[i]].price * 1).toFixed(2));
+            var totalNode = document.createTextNode((products[cartItems[i]-1].price * 1).toFixed(2));
             sum+=(products[cartItems[i]].price * 1);
-            console.log(sum)
             thTotal.appendChild(totalNode);
             
             tr.appendChild(thId);
@@ -61,9 +65,6 @@ window.onload = () => {
             tr.appendChild(thPrice);
             tr.appendChild(thTotal);
             tBody.appendChild(tr);
-            
-
-            console.log(cartItems[i]);
         }
         var trFoot = document.createElement("tr");
         var thTotal = document.createElement("th");

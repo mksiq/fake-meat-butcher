@@ -19,81 +19,79 @@
 <!-- Make cards inline and collapse -->
 
 <body>
-    <header>
-        <img src="images/logo.svg" alt="My store logo">
-        <h1 id="name">Fake Meat Butcher</h1>
+<header>
+    <img src="images/logo.svg" alt="My store logo">
+    <h1 id="name">Fake Meat Butcher</h1>
 
-    </header>
-    <nav>
-        <ul>
-            <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
-            <!-- <li class="mobile"><i class="material-icons">menu</i></li>
-            <li class="desktop" id="menu_burgers">Burgers</li>
-            <li class="desktop" id="menu_sausages">Sausages</li>
-            <li class="desktop" id="menu_beef">Beef</li>
+</header>
+<nav>
+    <ul>
+        <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
+        <!-- <li class="mobile"><i class="material-icons">menu</i></li>
+        <li class="desktop" id="menu_burgers">Burgers</li>
+        <li class="desktop" id="menu_sausages">Sausages</li>
+        <li class="desktop" id="menu_beef">Beef</li>
+        <li class="desktop" id="menu_vegan">Vegan</li>
+        <li id="searchLi"><input type="text" id="searchField" placeholder="Search"><i class="material-icons"
+                id="searchButton">search</i>
+        </li> -->
+        <li> <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a></li>
+        <li class="desktop" class="menu_signUp"><a href="./signup.html"class="iconNav">Signup</a></li>
+        <li class="mobile" class="menu_signUp"><a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a></li>
+    </ul>
+</nav>
 
-            <li class="desktop" id="menu_vegan">Vegan</li>
-            <li id="searchLi"><input type="text" id="searchField" placeholder="Search"><i class="material-icons"
-                    id="searchButton">search</i>
-            </li> -->
-            <a href="./cart.html" id="cart">
-                <li> <a href="./cart.html" id="cart"><i class="material-icons">shopping_cart</i></a></li>
-                <li class="desktop" id="menu_signup">Signup</li>
-                <li class="mobile" id="menu_signup"><i class="material-icons">person_add</i></li>
-        </ul>
-    </nav>
+<main class="mainOther">
+    <h2>User Sign up</h2>
+    <div id="popup">
 
-    <main id="mainSignup">
-        <h2>User Sign up</h2>
-        <div id="popup">
-          
-            <p id="outputMessageCheckbox">There is no cryptography in password, so please, don't use a real one.</p>
-            <button id=popupButton>Ok</button>
-        </div>
-        <form id="formId" method="POST" action="https://httpbin.org/post">
-            <div id="inputDiv">
-                <!-- Flex box -->
-                <!-- Left column -->
-                <div id="leftForm">
-                    <p>First Name:</p>
-                    <p><input type="text" name="first" size="30" required></p>
-                    <p>Password:</p>
-                    <p><input type="password" name="password" min="6" required></p>
-                    <p>E-mail:</p>
-                    <p><input type="email" name="email" min="5" required ></p>
-                </div>
-                <div id="rightForm">
-                    <p>Last Name:</p>
-                    <p><input type="text" name="last"  maxlength="35" required></p>
-                    <p>Phone number:</p>
-                    <p><input type="text" name="first" maxlength="35" required></p>
-                    <p>Confirm Password:</p>
-                    <p><input type="password" name="password2" min="6" required></p>
-                </div>
+        <p id="outputMessageCheckbox">There is no cryptography in password, so please, don't use a real one.</p>
+        <button id=popupButton>Ok</button>
+    </div>
+    <form id="formId" method="POST" action="https://httpbin.org/post">
+        <div id="inputDiv">
+            <!-- Flex box -->
+            <!-- Left column -->
+            <div id="leftForm">
+                <p>First Name:</p>
+                <p><input type="text" name="first" size="30" required></p>
+                <p>Password:</p>
+                <p><input type="password" name="password" min="6" required></p>
+                <p>E-mail:</p>
+                <p><input type="email" name="email" min="5" required ></p>
             </div>
-            <p><input  type="checkbox" name="like" value="agree" id="checkAgree" required>I have read the <a id="terms">terms</a> and
-                I accept it.</p>
-                <p id="signUpButtons">
-                    <input id="submitButtonForm" type="submit" name="submit" value="Submit">
-                    <input id="clearButtonForm" type="reset" name="reset" value="Clear">
-                </p>
-        </form>
-    </main>
-    <footer>
-        <ul>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon"
-                        aria-hidden="true"></i></a>
-            </li>
-            <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon"
-                        aria-hidden="true"></i></a>
-            </li>
-            <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon"
-                        aria-hidden="true"></i></a>
-            </li>
-        </ul>
-    </footer>
+            <div id="rightForm">
+                <p>Last Name:</p>
+                <p><input type="text" name="last"  maxlength="35" required></p>
+                <p>Phone number:</p>
+                <p><input type="text" name="first" maxlength="35" required></p>
+                <p>Confirm Password:</p>
+                <p><input type="password" name="password2" min="6" required></p>
+            </div>
+        </div>
+        <p><input  type="checkbox" name="like" value="agree" id="checkAgree" required>I have read the <a id="terms">terms</a> and
+            I accept it.</p>
+        <p id="signUpButtons">
+            <input id="submitButtonForm" type="submit" name="submit" value="Submit">
+            <input id="clearButtonForm" type="reset" name="reset" value="Clear">
+        </p>
+    </form>
+</main>
+<footer>
+    <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon"
+                                                                 aria-hidden="true"></i></a>
+        </li>
+        <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon"
+                                                                   aria-hidden="true"></i></a>
+        </li>
+        <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon"
+                                                                  aria-hidden="true"></i></a>
+        </li>
+    </ul>
+</footer>
 
 
 </body>
