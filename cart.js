@@ -1,4 +1,5 @@
 var sum =0;
+var shippingSum =0;
 
 window.onload = () => {
     var clearCart = document.getElementById("clearCart");
@@ -7,20 +8,20 @@ window.onload = () => {
     var cartButtons = document.getElementById("cartButtons")
     clearCart.addEventListener("click", () => {
         myStorage.clear();
-        clearCart.style = "display: none";
-        cartButtons.style = "display: none";
-        table.style = "display: none";
+        clearCart.style.display = "none";
+        cartButtons.style.display = "none";
+        table.style.display = "none";
         sum = 0;
-        cartIsEmpty.style = "display: block";
+        cartIsEmpty.style.display = "block";
     });
 
     
     if(!myStorage.getItem("Cart")){
-        clearCart.style = "display: none";
-        cartButtons.style = "display: none";
-        table.style = "display: none";
+        clearCart.style .display = "none";
+        cartButtons.style.display = "none";
+        table.style.display = "none";
     } else {
-        cartIsEmpty.style.display = "none"; // This is the correct way to apply css by DOM
+        cartIsEmpty.style.display = "none";
     }
     
     var tBody = document.getElementById("tBody");
@@ -28,56 +29,81 @@ window.onload = () => {
     var cartItems = [];
     if(cartItems){
         cartItems = myStorage.getItem('Cart').split(',');
-
-        // cartItems.forEach( (item) )
-
-
-
-
+        var cartQuantity = [];
+        cartItems.forEach( (item) => {
+            if(!cartQuantity[item]) cartQuantity[item] = 0;
+            cartQuantity[item]++;
+        })
+        var idPrinted = [];
 
         for(let i = 0; i < cartItems.length - 1; i++){
-            var tr = document.createElement("tr");
-            var thId = document.createElement("th");
-            var idNode = document.createTextNode(cartItems[i] );
-            thId.appendChild(idNode);
+            if( idPrinted[cartItems[i]]){
 
-            var thName = document.createElement("th");
-            var nameNode = document.createTextNode(products[cartItems[i]-1].name);
-            thName.appendChild(nameNode);
+            } else {
+                var tr = document.createElement("tr");
+                var thId = document.createElement("th");
+                var idNode = document.createTextNode(cartItems[i] );
+                thId.appendChild(idNode);
 
-            var thQty = document.createElement("th");
-            var qtyNode = document.createTextNode("1");
-            thQty.appendChild(qtyNode);
+                var thName = document.createElement("th");
+                var nameNode = document.createTextNode(products[cartItems[i]-1].name);
+                thName.appendChild(nameNode);
 
-            var thPrice = document.createElement("th");
-            var priceNode = document.createTextNode((products[cartItems[i]-1].price).toFixed(2));
-            thPrice.appendChild(priceNode);
+                var thQty = document.createElement("th");
+                var qtyNode = document.createTextNode(cartQuantity[cartItems[i]]);
+                thQty.appendChild(qtyNode);
+                var thPrice = document.createElement("th");
+                var priceNode = document.createTextNode((products[cartItems[i]-1].price).toFixed(2));
+                thPrice.appendChild(priceNode);
 
-            var thTotal = document.createElement("th");
-        
-            var totalNode = document.createTextNode((products[cartItems[i]-1].price * 1).toFixed(2));
-            sum+=(products[cartItems[i]].price * 1);
-            thTotal.appendChild(totalNode);
-            
-            tr.appendChild(thId);
-            tr.appendChild(thName);
-            tr.appendChild(thQty);
-            tr.appendChild(thPrice);
-            tr.appendChild(thTotal);
-            tBody.appendChild(tr);
+                var thTotal = document.createElement("th");
+
+                var totalNode = document.createTextNode((products[cartItems[i]-1].price * cartQuantity[cartItems[i]]).toFixed(2));
+                sum+=(products[cartItems[i]-1].price * cartQuantity[cartItems[i]]);
+                shippingSum+=(products[cartItems[i]-1].weight * cartQuantity[cartItems[i]] * 0.005 - 0.001);
+
+                thTotal.appendChild(totalNode);
+                tr.style.backgroundColor = "white";
+                tr.appendChild(thId);
+                tr.appendChild(thName);
+                tr.appendChild(thQty);
+                tr.appendChild(thPrice);
+                tr.appendChild(thTotal);
+                tBody.appendChild(tr);
+                idPrinted[cartItems[i]] = true;
+            }
         }
+        sum += shippingSum;
         var trFoot = document.createElement("tr");
+        trFoot.className = "tFooter";
+        var trFootShipping = document.createElement("tr");
+        trFootShipping.className = "tFooter";
+        var thShipping= document.createElement("th");
+        var shippingNodeText = document.createTextNode("Shipping Fees");
+        thShipping.appendChild(shippingNodeText);
+        thShipping.style.textAlign = "right";
+        thShipping.style.paddingRight = "3%";
+        thShipping.colSpan=4;
+        var thShippingValue = document.createElement("th");
+        var shippingNode = document.createTextNode((shippingSum*1).toFixed(2));
+        thShippingValue.appendChild(shippingNode)
+        trFootShipping.appendChild(thShipping);
+        trFootShipping.appendChild(thShippingValue);
+
         var thTotal = document.createElement("th");
-        thTotal.colSpan="4";
+        thTotal.colSpan=4;
+
         var totalNode = document.createTextNode("Total");
         thTotal.appendChild(totalNode)
+        thTotal.style.textAlign = "right";
+        thTotal.style.paddingRight = "6%";
         var thTotalValue = document.createElement("th");
         var valueNode = document.createTextNode((sum*1).toFixed(2));
         thTotalValue.appendChild(valueNode)
 
         trFoot.appendChild(thTotal);
         trFoot.appendChild(thTotalValue);
-
+        tfoot.appendChild(trFootShipping)
         tfoot.appendChild(trFoot)
     }
     

@@ -529,3 +529,12 @@ input:after{
   color: #5b8c5a;
   text-decoration: underline;
 }
+
+#cartTHeader{
+  background-color: #596157;
+  color: white;
+}
+
+.tFooter{
+  background-color: #EEE;
+}
