@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="icon" href="images/ico.svg">
+  <head>
+    <link rel="icon" href="images/ico.svg" />
     <meta charset="utf-8" />
     <title>Fake Meat Butcher Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
 
     <script src="products.js"></script>
     <script src="script.js"></script>
     <script src="signUp.js"></script>
-</head>
-<!-- Make cards inline and collapse -->
+  </head>
+  <!-- Make cards inline and collapse -->
 
-<body>
-<header>
-    <img src="images/logo.svg" alt="My store logo">
-    <h1 id="name">Fake Meat Butcher</h1>
-
-</header>
-<nav>
-    <ul>
-        <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="My store logo" />
+      <h1 id="name">Fake Meat Butcher</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html" id="home"><i class="material-icons">home</i></a>
+        </li>
         <!-- <li class="mobile"><i class="material-icons">menu</i></li>
         <li class="desktop" id="menu_burgers">Burgers</li>
         <li class="desktop" id="menu_sausages">Sausages</li>
@@ -35,65 +35,77 @@
         <li id="searchLi"><input type="text" id="searchField" placeholder="Search"><i class="material-icons"
                 id="searchButton">search</i>
         </li> -->
-        <li> <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a></li>
-        <li class="desktop" class="menu_signUp"><a href="./signup.html"class="iconNav">Signup</a></li>
-        <li class="mobile" class="menu_signUp"><a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a></li>
-    </ul>
-</nav>
+        <li>
+          <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a>
+        </li>
+        <li class="desktop" class="menu_signUp">
+          <a href="./signup.html" class="iconNav">Signup</a>
+        </li>
+        <li class="mobile" class="menu_signUp">
+          <a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a>
+        </li>
+      </ul>
+    </nav>
 
-<main class="mainOther">
-    <h2>User Sign up</h2>
-    <div id="popup">
-
-        <p id="outputMessageCheckbox">There is no cryptography in password, so please, don't use a real one.</p>
-        <button id=popupButton>Ok</button>
-    </div>
-    <form id="formId" method="POST" action="https://httpbin.org/post">
-        <div id="inputDiv">
-            <!-- Flex box -->
-            <!-- Left column -->
-            <div id="leftForm">
-                <p>First Name:</p>
-                <p><input type="text" name="first" size="30" required></p>
-                <p>Password:</p>
-                <p><input type="password" name="password" min="6" required></p>
-                <p>E-mail:</p>
-                <p><input type="email" name="email" min="5" required ></p>
-            </div>
-            <div id="rightForm">
-                <p>Last Name:</p>
-                <p><input type="text" name="last"  maxlength="35" required></p>
-                <p>Phone number:</p>
-                <p><input type="text" name="first" maxlength="35" required></p>
-                <p>Confirm Password:</p>
-                <p><input type="password" name="password2" min="6" required></p>
-            </div>
-        </div>
-        <p><input  type="checkbox" name="like" value="agree" id="checkAgree" required>I have read the <a id="terms">terms</a> and
-            I accept it.</p>
-        <p id="signUpButtons">
-            <input id="submitButtonForm" type="submit" name="submit" value="Submit">
-            <input id="clearButtonForm" type="reset" name="reset" value="Clear">
+    <main class="mainOther">
+      <h2>User Sign up</h2>
+      <div id="popup">
+        <p id="outputMessageCheckbox">
+          There is no cryptography in password, so please, don't use a real one.
         </p>
-    </form>
-</main>
-<footer>
-    <ul>
+        <button id="popupButton">Ok</button>
+      </div>
+      <form id="formId" method="POST" action="https://httpbin.org/post">
+        <div id="inputDiv">
+          <!-- Flex box -->
+          <!-- Left column -->
+          <div id="leftForm">
+            <p>First Name:</p>
+            <p><input type="text" name="first" size="30" required /></p>
+            <p>Password:</p>
+            <p><input type="password" name="password" min="6" required /></p>
+            <p>E-mail:</p>
+            <p><input type="email" name="email" min="5" required /></p>
+          </div>
+          <div id="rightForm">
+            <p>Last Name:</p>
+            <p><input type="text" name="last" maxlength="35" required /></p>
+            <p>Phone number:</p>
+            <p><input type="text" name="first" maxlength="35" required /></p>
+            <p>Confirm Password:</p>
+            <p><input type="password" name="password2" min="6" required /></p>
+          </div>
+        </div>
+        <p>
+          <input type="checkbox" name="like" value="agree" id="checkAgree" required />I have read
+          the <a id="terms">terms</a> and I accept it.
+        </p>
+        <p id="signUpButtons">
+          <input id="submitButtonForm" type="submit" name="submit" value="Submit" />
+          <input id="clearButtonForm" type="reset" name="reset" value="Clear" />
+        </p>
+      </form>
+    </main>
+    <footer>
+      <ul>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./about.html">About</a></li>
-        <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon"
-                                                                 aria-hidden="true"></i></a>
+        <li>
+          <a href="https://www.twitter.com/fakemeatbutcher"
+            ><i class="fa fa-twitter icon" aria-hidden="true"></i
+          ></a>
         </li>
-        <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon"
-                                                                   aria-hidden="true"></i></a>
+        <li>
+          <a href="https://www.instagram.com/fakemeatbutcher"
+            ><i class="fa fa-instagram icon" aria-hidden="true"></i
+          ></a>
         </li>
-        <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon"
-                                                                  aria-hidden="true"></i></a>
+        <li>
+          <a href="https://www.facebook.com/fakemeatbutcher"
+            ><i class="fa fa-facebook-square icon" aria-hidden="true"></i
+          ></a>
         </li>
-    </ul>
-</footer>
-
-
-</body>
-
+      </ul>
+    </footer>
+  </body>
 </html>

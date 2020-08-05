@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="icon" href="images/ico.svg" />
+    <meta charset="utf-8" />
+    <title>Fake Meat Butcher Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
 
-<head>
-  <link rel="icon" href="images/ico.svg">
-  <meta charset="utf-8" />
-  <title>Fake Meat Butcher Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="My store logo" />
+      <h1 id="name">Fake Meat Butcher</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html" id="home"><i class="material-icons">home</i></a>
+        </li>
+        <li>
+          <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a>
+        </li>
+        <li class="desktop" class="menu_signUp">
+          <a href="./signup.html" class="iconNav">Sign Up</a>
+        </li>
+        <li class="mobile" class="menu_signUp">
+          <a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a>
+        </li>
+      </ul>
+    </nav>
 
-  <script src="products.js"></script>
-  <script src="script.js"></script>
-</head>
-<!-- Make cards inline and collapse -->
-<body>
-<header>
-  <img src="images/logo.svg" alt="My store logo">
-  <h1 id="name">Fake Meat Butcher</h1>
+    <main class="mainOther">
+      <div id="about">
+        <p>Page created for the WEB222 <br />Assignment 5 @ Seneca College</p>
+        <h4>Source of materials used:</h4>
+        <p>
+          <a class="otherLink" href="https://fontawesome.com/">Fonts Awesome</a> for social media
+          icons.
+        </p>
+        <p>
+          <a class="otherLink" href="https://fonts.google.com/">Google fonts</a> for icons and logo.
+        </p>
+        <p>No templates nor libraries used.</p>
+        <p>Cart is simulated by the use of Local Storage</p>
+        <p>Shipping is calculated based on weight of car.</p>
+        <p>Images by <a class="otherLink" href="https://unsplash.com/">Unsplash</a>.</p>
+        <p>Logo design by myself.</p>
+        <br />
+        <p>Maickel Siqueira</p>
+      </div>
+    </main>
 
-</header>
-<nav>
-  <ul>
-    <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
-    <li> <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a></li>
-    <li class="desktop" class="menu_signUp"><a href="./signup.html"class="iconNav">Sign Up</a></li>
-    <li class="mobile" class="menu_signUp"><a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a></li>
-  </ul>
-</nav>
-
-<main class="mainOther">
-  <div id="about">
-    <p>Page created for the WEB222 <br>Assignment 5 @ Seneca College</p>
-    <h4>Source of materials used:</h4>
-    <p><a class="otherLink" href="https://fontawesome.com/">Fonts Awesome</a> for social media icons.</p>
-    <p><a class="otherLink" href="https://fonts.google.com/">Google fonts</a> for icons and logo.</p>
-    <p>No templates nor libraries used.</p>
-    <p>Cart is simulated by the use of Local Storage</p>
-    <p>Shipping is calculated based on weight of car.</p>
-    <p>Images by <a class="otherLink" href="https://unsplash.com/">Unsplash</a>.</p>
-    <p>Logo design by myself.</p>
-    <br>
-    <p>Maickel Siqueira</p>
-  </div>
-
-</main>
-
-<footer>
-  <ul>
-    <li><a href="./contact.html">Contact</a></li>
-    <li><a href="./about.html">About</a></li>
-    <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
-    </li>
-    <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon"
-                                                               aria-hidden="true"></i></a>
-    </li>
-    <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon"
-                                                              aria-hidden="true"></i></a>
-    </li>
-  </ul>
-</footer>
-</body>
-
+    <footer>
+      <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li>
+          <a href="https://www.twitter.com/fakemeatbutcher"
+            ><i class="fa fa-twitter icon" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/fakemeatbutcher"
+            ><i class="fa fa-instagram icon" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/fakemeatbutcher"
+            ><i class="fa fa-facebook-square icon" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>

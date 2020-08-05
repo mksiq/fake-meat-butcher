@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="icon" href="images/ico.svg" />
+    <meta charset="utf-8" />
+    <title>Fake Meat Butcher Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
 
-<head>
-  <link rel="icon" href="images/ico.svg">
-  <meta charset="utf-8" />
-  <title>Fake Meat Butcher Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <!-- Make cards inline and collapse -->
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="My store logo" />
+      <h1 id="name">Fake Meat Butcher</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html" id="home"><i class="material-icons">home</i></a>
+        </li>
+        <li class="mobile"><i class="material-icons">menu</i></li>
+        <li class="desktop" id="menu_burgers">Burgers</li>
+        <li class="desktop" id="menu_sausages">Sausages</li>
+        <li class="desktop" id="menu_beef">Beef</li>
 
-  <script src="products.js"></script>
-  <script src="script.js"></script>
-</head>
-<!-- Make cards inline and collapse -->
-<body>
-<header>
-  <img src="images/logo.svg" alt="My store logo">
-  <h1 id="name">Fake Meat Butcher</h1>
+        <li class="desktop" id="menu_vegan">Vegan</li>
+        <li id="searchLi">
+          <input type="search" id="searchField" placeholder="Search" /><i
+            class="material-icons"
+            id="searchButton"
+            >search</i
+          >
+        </li>
 
-</header>
-<nav>
-  <ul>
-    <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
-    <li class="mobile"><i class="material-icons">menu</i></li>
-    <li class="desktop" id="menu_burgers">Burgers</li>
-    <li class="desktop" id="menu_sausages">Sausages</li>
-    <li class="desktop" id="menu_beef">Beef</li>
+        <li>
+          <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a>
+        </li>
+        <li class="menu_signUp desktop"><a href="./signup.html" class="iconNav">Signup</a></li>
+        <li class="menu_signUp mobile">
+          <a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a>
+        </li>
+      </ul>
+    </nav>
 
-    <li class="desktop" id="menu_vegan">Vegan</li>
-    <li id="searchLi"><input type="search" id="searchField" placeholder="Search"><i class="material-icons" id="searchButton">search</i>
-    </li>
-
-    <li> <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a></li>
-    <li class="desktop" class="menu_signUp"><a href="./signup.html"class="iconNav">Signup</a></li>
-    <li class="mobile" class="menu_signUp"><a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a></li>
-  </ul>
-</nav>
-
-<main id="main">
-  <!-- <div id="products">
+    <main id="main">
+      <!-- <div id="products">
     <div class="card">
       <img src="images/1.png" alt="Beyond Burger" style="width:100%">
       <h2>Beyond Burger</h2>
@@ -54,40 +63,46 @@
       <p><button>Add to cart</button></p>
     </div>
   </div> -->
-  <div id="changePage">
-    <i class="material-icons changeIcon" id="menu_back">skip_previous</i>
-    <i class="material-icons changeIcon">keyboard_arrow_up</i>
-    <i class="material-icons changeIcon" id="menu_next">skip_next</i>
-  </div>
+      <div id="changePage">
+        <i class="material-icons changeIcon" id="menu_back">skip_previous</i>
+        <i class="material-icons changeIcon">keyboard_arrow_up</i>
+        <i class="material-icons changeIcon" id="menu_next">skip_next</i>
+      </div>
+    </main>
 
-</main>
+    <footer>
+      <ul>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li>
+          <a href="https://www.twitter.com/fakemeatbutcher"
+            ><i class="fa fa-twitter icon" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/fakemeatbutcher"
+            ><i class="fa fa-instagram icon" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/fakemeatbutcher"
+            ><i class="fa fa-facebook-square icon" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
 
-<footer>
-  <ul>
-    <li><a href="./contact.html">Contact</a></li>
-    <li><a href="./about.html">About</a></li>
-    <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
-    </li>
-    <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon"
-                                                               aria-hidden="true"></i></a>
-    </li>
-    <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon"
-                                                              aria-hidden="true"></i></a>
-    </li>
-  </ul>
-</footer>
-
-<!-- description: "A burger with taste so rich and texture so meaty, you won't believe it’s made from plants.",
+    <!-- description: "A burger with taste so rich and texture so meaty, you won't believe it’s made from plants.",
 brand: "Beyond Meat",
 category:["hamburger",
 "vegan"],
 weigth: 226,
 price: 10.90,
 available: true,
-discount: 0 -->
-<!--
+discount: 0
+
     Introduction
-    ------------
+
     You are asked to create an online store in HTML, CSS, and JavaScript.
     Please implement a store with all of the following requirements.
     You may remove this comment and place all your HTML in this file.
@@ -162,8 +177,5 @@ discount: 0 -->
     12. Have fun!  Build something you'd be proud to show future employers in
     interviews.  Take the time to properly design and implement a beautiful and
     functional storefront.  Maybe it will inspire you to start your own online business?
-  -->
-
-</body>
-
+  --></body>
 </html>

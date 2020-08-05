@@ -1,9 +1,9 @@
 /* Add any JavaScript you need to this file. */
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+// import products from './products'
 var myStorage = window.localStorage;
-var productInCart = "";
-
+var productInCart = '';
 
 var productsDiv = document.createElement('div');
 var main;
@@ -30,7 +30,7 @@ function loadJavaScript() {
     next.addEventListener('click', nextProducts);
     back.addEventListener('click', backProducts);
   }
-  if(burger){
+  if (burger) {
     burger.addEventListener('click', loadBurger);
     sausages.addEventListener('click', loadSausage);
     beef.addEventListener('click', loadBeef);
@@ -102,8 +102,8 @@ var searchProducts = () => {
   index = 0;
   for (; index < products.length && total < maxNumberOfProducts; index++) {
     if (
-        products[index].name.toLowerCase().includes(text.toLowerCase()) ||
-        products[index].description.toLowerCase().includes(text.toLowerCase())
+      products[index].name.toLowerCase().includes(text.toLowerCase()) ||
+      products[index].description.toLowerCase().includes(text.toLowerCase())
     ) {
       total++;
       createCards(products[index]);
@@ -166,7 +166,7 @@ var loadBeef = () => {
   }
 };
 
-var createCards = (product) => {
+var createCards = product => {
   var card = document.createElement('div');
   card.className = 'card';
 
@@ -207,13 +207,13 @@ var createCards = (product) => {
   var button = document.createElement('button');
   var addNode = document.createTextNode('Add to cart');
   button.appendChild(addNode);
-  var addItem = () =>{
-    productInCart = myStorage.getItem('Cart')
-    if(!productInCart) productInCart = "";
-    productInCart+= `${product.id},`;
-    myStorage.setItem("Cart", productInCart);
-  }
-  button.addEventListener("click", addItem);
+  var addItem = () => {
+    productInCart = myStorage.getItem('Cart');
+    if (!productInCart) productInCart = '';
+    productInCart += `${product.id},`;
+    myStorage.setItem('Cart', productInCart);
+  };
+  button.addEventListener('click', addItem);
   pAdd.appendChild(button);
   card.appendChild(img);
   card.appendChild(h2);
@@ -222,3 +222,5 @@ var createCards = (product) => {
   card.appendChild(pAdd);
   if (productsDiv) productsDiv.appendChild(card);
 };
+
+// export { myStorage };
