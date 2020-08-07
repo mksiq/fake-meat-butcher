@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <link rel="icon" href="images/ico.svg">
-  <meta charset="utf-8" />
-  <title>Fake Meat Butcher Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-  <script src="products.js"></script>
-  <script src="script.js"></script>
-</head>
-<body>
-<header>
-  <img src="images/logo.svg" alt="My store logo">
-  <h1 id="name">Fake Meat Butcher</h1>
-
-</header>
-<nav>
-  <ul>
-    <li><a href="./index.html" id="home"><i class="material-icons">home</i></a></li>
-    <li> <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a></li>
-    <li class="desktop" class="menu_signUp"><a href="./signup.html"class="iconNav">Signup</a></li>
-    <li class="mobile" class="menu_signUp"><a href="./signup.html" class="iconNav"><i class="material-icons">person_add</i></a></li>
-  </ul>
-</nav>
-
+  <head>
+    <link rel="icon" href="images/ico.svg" />
+    <meta charset="utf-8" />
+    <title>Fake Meat Butcher Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+    <script src="cities.js"></script>
+    <script src="products.js"></script>
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="My store logo" />
+      <h1 id="name">Fake Meat Butcher</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html" id="home"><i class="material-icons">home</i></a>
+        </li>
+        <li>
+          <a href="./cart.html" class="iconNav"><i class="material-icons">shopping_cart</i></a>
+        </li>
+        <li class="menu_signUp desktop"><a href="./contact.html" class="iconNav">Contact Us</a></li>
+        <li class="menu_signUp mobile">
+          <a href="./contact.html" class="iconNav"><i class="material-icons">email</i></a>
+        </li>
+      </ul>
+    </nav>
 <main class="mainOther">
-  <div id="about">
-    <p>Check our nonexistent social media pages on the links located on lower part of this page.
-      <br>
-    <p>Click <a href="mailto:no@where.ca" class="otherLink">here</a> to send an e-mail to nowhere</p>
-    <p>Maickel Siqueira</p>
-  </div>
+  <form name="contact" action="https://httpbin.org/get" method="GET">
+    <label>Name</label>
+    <br>
+    <input type="text" name="name">
+    <br>
+    <label>Address</label>
+    <br>
+    <input type="text" name="address">
+    <br>
+    <label for="city">City</label>
+    <br>
+    <input list="cities" name="city" id="city">
+    <datalist id="cities">
+    </datalist>
+    <br>
+    <label>Postal Code</label>
+    <br>
+    <input type="text" name="postal">
+    <br>
+    <label>Category</label>
+    <br>
+    <input type="radio" name="category"><label>Question</label>
+    <input type="radio" name="category"><label>Comment</label>
+    <input type="radio" name="category"><label>Order Problem</label>
+    <label>Order Number</label>
+    <input type="text" name="orderNumber">
+    <input type="radio" name="category"><label>Question</label>
+    <br>
+    <textarea name="area"></textarea>
+    <input type="text" value="Maickel Siqueira" name="studentName" hidden>
+    <br>
+    <input type="submit" value="Submit">
+    
+    <br>
+
+  </form>
+
+  
 </main>
 
 <footer>
   <ul>
-    <li><a href="./contact.html">Contact</a></li>
-    <li><a href="./about.html">About</a></li>
-    <li><a href="https://www.twitter.com/fakemeatbutcher"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
+    <li><a href="./signup.html" class="iconNav"><i class="material-icons md-18 icon">person_add</i></a></li>
+    <li class="desktop"><a id="footerText" href="./about.html">About</a></li>
+    <li class="mobile"><a href="./about.html"><span class="material-icons icon md-18" >help_outline</span></a></li>
+    <li>
+      <a href="https://www.twitter.com/fakemeatbutcher"
+        ><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
     </li>
-    <li><a href="https://www.instagram.com/fakemeatbutcher"><i class="fa fa-instagram icon" aria-hidden="true"></i></a>
+    <li>
+      <a href="https://www.instagram.com/fakemeatbutcher"
+        ><i class="fa fa-instagram icon" aria-hidden="true"></i></a>
     </li>
-    <li><a href="https://www.facebook.com/fakemeatbutcher"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+    <li>
+      <a href="https://www.facebook.com/fakemeatbutcher"
+        ><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+    </li>
+    <li class="desktop">
+      <form  action="https://formspree.io/xbjzwwjn" method="POST" class="subscribeForm">
+        <input type="email" name="_replyto" placeholder="Email to subscribe" class="subscribeField">
+        <input  type="submit" value="Subscribe" class="subscribeButton">
+      </form>
+    </li>
+    <li class="mobile">
+      <form  action="https://formspree.io/xbjzwwjn" method="POST" class="subscribeForm">
+        <input type="email" name="_replyto" placeholder="Email to subscribe" class="subscribeField" required>
+        <button  type="submit" value="Subscribe" class="subscribeButton"><span class="material-icons md-18">
+          mark_email_read
+          </span></button>
+      </form>
     </li>
   </ul>
 </footer>
 </body>
-
 </html>
