@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="images/ico.svg" />
-    <meta charset="utf-8" />
+    <link rel="icon" href="images/ico.svg"/>
+    <meta charset="utf-8"/>
     <title>Fake Meat Butcher Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
@@ -34,45 +34,54 @@
         </li>
       </ul>
     </nav>
-<main class="mainOther">
-  <form name="contact" action="https://httpbin.org/get" method="GET">
-    <label>Name</label>
+<main class="mainContact">
+  <h2>Contact Us</h2>
+  <div class="contact">
+  <form name="contact" method="post" action="https://httpbin.org/post" autocomplete="on" onsubmit='return formValidation();'>
+    <label for="fullName"><sup class="required">* </sup>Name</label>
     <br>
-    <input type="text" name="name">
+    <input type="text" name="name" class="lineField" id="fullName">
+    <label for="email"><sup class="required">* </sup>Email</label>
     <br>
-    <label>Address</label>
+    <input type="email" name="email" class="lineField" id="email">
     <br>
-    <input type="text" name="address">
+    <label for="address"><sup class="required">* </sup>Address</label>
     <br>
-    <label for="city">City</label>
+    <input type="text" name="address" class="lineField" id="address">
+    <br>
+    <label for="city"><sup class="required">* </sup>City</label>
     <br>
     <input list="cities" name="city" id="city">
     <datalist id="cities">
     </datalist>
     <br>
-    <label>Postal Code</label>
+    <label for="postalCode"><sup class="required">* </sup>Postal Code</label>
     <br>
-    <input type="text" name="postal">
+    <input type="text" name="postal" id="postalCode" maxlength="7">
     <br>
-    <label>Category</label>
+    <label for="category"><sup class="required">* </sup>Category</label>
     <br>
-    <input type="radio" name="category"><label>Question</label>
-    <input type="radio" name="category"><label>Comment</label>
-    <input type="radio" name="category"><label>Order Problem</label>
-    <label>Order Number</label>
-    <input type="text" name="orderNumber">
-    <input type="radio" name="category"><label>Question</label>
+    <input type="radio" name="category" class="radioContact" id="questionContact"><label>Question</label>
+    <br class="mobile">
+    <input type="radio" name="category" class="radioContact" id="commentContact"><label>Comment</label>
+    <br class="mobile">
+    <input type="radio" name="category" class="radioContact" id="orderContact"><label>Order Problem</label>
+    <br class="mobile">
+    <input type="text" name="orderNumber" id="orderNumber" placeholder="Order number">
     <br>
-    <textarea name="area"></textarea>
+    <label for="message"><sup class="required">* </sup>Message</label>
+    <br>
+    <br>
+    <textarea name="area" id="message" size="500" maxlength="500"></textarea>
     <input type="text" value="Maickel Siqueira" name="studentName" hidden>
     <br>
-    <input type="submit" value="Submit">
-    
+    <p id="formButtons">
+      <input id="contactSubmit" type="submit" value="Submit">
+      <input id="clearButtonForm" type="reset" value="clear" >
+    </p>   
     <br>
-
   </form>
-
-  
+  </div>  
 </main>
 
 <footer>
