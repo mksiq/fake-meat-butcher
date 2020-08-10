@@ -27,7 +27,6 @@ function formValidation() {
     validateOrderNumber();
     validateMessage();
     if (errorList.length >= 1) {
-        console.log(errorList);
         alert(errorList)
         return false;
     } else {
