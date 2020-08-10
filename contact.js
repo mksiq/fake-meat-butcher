@@ -1,6 +1,5 @@
 var selectList;
 var errorList = "";
-
 window.addEventListener('load', loadSelect, false);
 function loadSelect() {
     var orderContact = document.getElementById("orderContact");
@@ -18,7 +17,6 @@ function loadSelect() {
         selectList.appendChild(option);
     });
 }
-
 function formValidation() {
     errorList = [];
     validateName();
@@ -36,7 +34,6 @@ function formValidation() {
         return true;
     }
 }
-
 function validateName() {
     var allAlpha = true;
     var elem = document.querySelector("#fullName");
@@ -111,9 +108,7 @@ function validateMessage() {
 }
 function showOrderNumber() {
     var orderNumber = document.querySelector("#orderNumber");
-
     orderNumber.style.display = "inline";
-
 }
 function hideOrderNumber() {
     var orderNumber = document.querySelector("#orderNumber");

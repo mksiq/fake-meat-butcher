@@ -8,6 +8,7 @@ window.onload = () => {
   var cartIsEmpty = document.getElementById('cartIsEmpty');
   var table = document.getElementById('cartTable');
   var cartButtons = document.getElementById('cartButtons');
+
   clearCart.addEventListener('click', () => {
     myStorage.clear();
     clearCart.style.display = 'none';
@@ -28,15 +29,17 @@ window.onload = () => {
   var tBody = document.getElementById('tBody');
   var tfoot = document.getElementById('tFoot');
   var cartItems = [];
+
   if (cartItems) {
     cartItems = myStorage.getItem('Cart').split(',');
     var cartQuantity = [];
+
     cartItems.forEach(item => {
       if (!cartQuantity[item]) cartQuantity[item] = 0;
       cartQuantity[item]++;
     });
-    var idPrinted = [];
 
+    var idPrinted = [];
     for (let i = 0; i < cartItems.length - 1; i++) {
       if (!idPrinted[cartItems[i]]) {
         var tr = document.createElement('tr');
@@ -91,10 +94,8 @@ window.onload = () => {
     thShippingValue.appendChild(shippingNode);
     trFootShipping.appendChild(thShipping);
     trFootShipping.appendChild(thShippingValue);
-
     var thTotal = document.createElement('th');
     thTotal.colSpan = 4;
-
     var totalNode = document.createTextNode('Total CAD$');
     thTotal.appendChild(totalNode);
     thTotal.style.textAlign = 'right';
@@ -102,7 +103,6 @@ window.onload = () => {
     var thTotalValue = document.createElement('th');
     var valueNode = document.createTextNode((sum * 1).toFixed(2));
     thTotalValue.appendChild(valueNode);
-
     trFoot.appendChild(thTotal);
     trFoot.appendChild(thTotalValue);
     tfoot.appendChild(trFootShipping);
