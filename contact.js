@@ -42,15 +42,20 @@ function validateName() {
     var elem = document.querySelector("#fullName");
     var inputValue = elem.value.trim();
     inputValue = inputValue.toUpperCase();
-    for (var i = 0; i < inputValue.length; i++) {
-        // check all characters are not numbers, as we must be able to accept special chars for name
-        if (!isNaN(inputValue.charAt(i))) {
-            allAlpha = false;
-        }
-    }
-    if (!allAlpha) {
-        errorList +="Invalid Name. Don't use numbers.\n";
+    if(inputValue.length < 2){
+        errorList +="Invalid Name. Too short.\n";
         elem.focus();
+    } else {
+        for (var i = 0; i < inputValue.length; i++) {
+            // check all characters are not numbers, as we must be able to accept special chars for name
+            if (!isNaN(inputValue.charAt(i))) {
+                allAlpha = false;
+            }
+        }
+        if (!allAlpha) {
+            errorList +="Invalid Name. Don't use numbers.\n";
+            elem.focus();
+        }
     }
 }
 function validateAddress() {

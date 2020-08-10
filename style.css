@@ -323,7 +323,7 @@ input:after {
   text-decoration-color: #5b8c5a;
 }
 #popup {
-  /* display: none; */
+  display: none;
   position: fixed;
   margin: 20% 10% 15% 10%;
   min-height: 10%;
@@ -363,11 +363,13 @@ input:after {
 #clearCart {
   min-width: 10%;
   max-width: 30%;
+  max-height: 15%;
   background-color: #552244;
 }
 #checkout {
   min-width: 10%;
   max-width: 30%;
+  max-height: 15%;
   background-color: #5b8c5a;
 }
 #cartButtons {
@@ -606,6 +608,5 @@ footer .icon {
 
 .mainContact form label{
   font-size: 0.8em;
-  
 }
 /* cfd186 */

@@ -81,7 +81,7 @@ window.onload = () => {
     var trFootShipping = document.createElement('tr');
     trFootShipping.className = 'tFooter';
     var thShipping = document.createElement('th');
-    var shippingNodeText = document.createTextNode('Shipping Fees');
+    var shippingNodeText = document.createTextNode('Shipping Fees (weight)');
     thShipping.appendChild(shippingNodeText);
     thShipping.style.textAlign = 'right';
     thShipping.style.paddingRight = '3%';
@@ -95,7 +95,7 @@ window.onload = () => {
     var thTotal = document.createElement('th');
     thTotal.colSpan = 4;
 
-    var totalNode = document.createTextNode('Total');
+    var totalNode = document.createTextNode('Total CAD$');
     thTotal.appendChild(totalNode);
     thTotal.style.textAlign = 'right';
     thTotal.style.paddingRight = '6%';
