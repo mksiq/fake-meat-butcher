@@ -1,6 +1,7 @@
 /* Add any CSS you need to this file. */
 /* https://colorhunt.co/palette/172691 */
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -241,7 +242,8 @@ a {
   text-decoration: none;
   color: white;
 }
-.iconNav, #home {
+.iconNav,
+#home {
   color: white;
 }
 #userCart {
@@ -419,7 +421,7 @@ footer .icon {
 .tFooter {
   background-color: #eee;
 }
-.subscribeForm{
+.subscribeForm {
   display: flex;
 }
 .subscribeForm .subscribeButton {
@@ -478,9 +480,9 @@ footer .icon {
     font-size: 1.5em;
   }
   main {
-    overflow: auto; 
+    overflow: auto;
   }
-  .index{
+  .index {
     padding-top: 50%;
   }
   #inputDiv {
@@ -499,23 +501,23 @@ footer .icon {
     margin-left: 0;
     width: 100%;
   }
-  .subscribeForm{
+  .subscribeForm {
     display: flex;
   }
   .subscribeForm .subscribeButton {
-    width:100%;
+    width: 100%;
     background-color: #596157;
     color: white;
     border: none;
     padding: 2% 4%;
-        margin-right: 10%;
+    margin-right: 10%;
   }
   .subscribeForm:hover .subscribeButton {
     background-color: #5b8c5a;
     width: 30px;
   }
   .subscribeForm .subscribeField {
-    margin: 2% 0 ;
+    margin: 2% 0;
     padding: 1% 4%;
     width: 100px;
   }
@@ -545,31 +547,33 @@ footer .icon {
   margin-top: 5%;
   text-align: center;
 }
-.lineField{
+.lineField {
   width: 100%;
   margin-bottom: 6px;
 }
-#city, #postalCode, .radioContact{
+#city,
+#postalCode,
+.radioContact {
   margin-bottom: 5px;
 }
-#message{
+#message {
   width: 100%;
   min-height: 100px;
   resize: none;
 }
-.contact{
+.contact {
   display: flex;
   flex-direction: row;
   justify-items: center;
   width: 100%;
 }
-.contact form{
+.contact form {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
-#contactSubmit{
-  background-color:#5b8c5a;
+#contactSubmit {
+  background-color: #5b8c5a;
   border-style: none;
   padding: 1%;
   width: 30%;
@@ -586,7 +590,7 @@ footer .icon {
   padding: 1%;
   width: 20%;
 }
-#orderNumber{
+#orderNumber {
   margin-left: 5px;
 }
 #submitButtonForm {
@@ -597,16 +601,16 @@ footer .icon {
   border-style: none;
   font-weight: 600;
 }
-#orderNumber{
+#orderNumber {
   display: none;
 }
-.required{
+.required {
   margin-top: 0;
   font-size: 0.7em;
   color: darkred;
 }
 
-.mainContact form label{
+.mainContact form label {
   font-size: 0.8em;
 }
 /* cfd186 */
